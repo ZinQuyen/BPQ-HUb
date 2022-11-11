@@ -35,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
     Widget dangkii = ElevatedButton(
       style: ButtonStyle(
           backgroundColor:
-              MaterialStatePropertyAll<Color>(Colors.yellow.withOpacity(0.8)),
+              MaterialStatePropertyAll<Color>(Colors.blueGrey),
           shape: MaterialStateProperty.all(RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30.0)))),
       onPressed: () {
@@ -53,7 +53,7 @@ class _LoginPageState extends State<LoginPage> {
     Widget quenMK = ElevatedButton(
       style: ButtonStyle(
           backgroundColor:
-              MaterialStatePropertyAll<Color>(Colors.yellow.withOpacity(0.8)),
+              MaterialStatePropertyAll<Color>(Colors.blueGrey),
           shape: MaterialStateProperty.all(RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30.0)))),
       onPressed: () {
