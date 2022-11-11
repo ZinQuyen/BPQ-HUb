@@ -40,7 +40,7 @@ class _LoginNamNuState extends State<LoginNamNu> {
     Widget Login = Text(
       'Nhập thông tin',
       style: TextStyle(
-          fontWeight: FontWeight.bold, fontSize: 30, color: Colors.red),
+          fontWeight: FontWeight.bold, fontSize: 30, color: Colors.yellow),
     );
 
     Widget Hoten(String title) => TextField(
