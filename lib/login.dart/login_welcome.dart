@@ -97,7 +97,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Hoten('Họ Tên'),
+                    child:Hoten('Họ Tên') ,
                   ),
                   Padding(
                     padding: const EdgeInsets.only(right: 330),
@@ -145,11 +145,11 @@ Widget Login = Text(
 );
 Widget text1 = Text(
   'Tên đăng nhập',
-  style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent),
+  style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20, color: Colors.blueAccent),
 );
 Widget text2 = Text(
   'Mật khẩu',
-  style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent),
+  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.blueAccent),
 );
 Widget dangki = Text(
   'Đăng ký',

@@ -105,6 +105,7 @@ class _quenpassState extends State<quenpass> {
               child: Text(
                 'Mật khẩu 6 số để bảo vệ an toàn',
                 style: TextStyle(
+                  fontSize: 20,
                     fontWeight: FontWeight.bold, color: Colors.blueAccent ),
               ),
             ),
@@ -120,6 +121,7 @@ class _quenpassState extends State<quenpass> {
               child: Text(
                 'Xác nhận mật khẩu',
                 style: TextStyle(
+                  fontSize: 20,
                     fontWeight: FontWeight.bold, color: Colors.blueAccent),
               ),
             ),
