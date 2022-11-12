@@ -105,7 +105,7 @@ class _quenpassState extends State<quenpass> {
               child: Text(
                 'Mật khẩu 6 số để bảo vệ an toàn',
                 style: TextStyle(
-                    fontWeight: FontWeight.bold, color: Colors.yellow),
+                    fontWeight: FontWeight.bold, color: Colors.blueAccent ),
               ),
             ),
           ],
@@ -120,7 +120,7 @@ class _quenpassState extends State<quenpass> {
               child: Text(
                 'Xác nhận mật khẩu',
                 style: TextStyle(
-                    fontWeight: FontWeight.bold, color: Colors.yellow),
+                    fontWeight: FontWeight.bold, color: Colors.blueAccent),
               ),
             ),
           ],
@@ -137,7 +137,11 @@ class _quenpassState extends State<quenpass> {
           title: Text(widget.title),
           backgroundColor: Colors.yellow[600],
         ),
-        body: 
-        Stack(children: [Container(), Context]));
+        body: Container(decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('image/b.png'),
+                fit: BoxFit.cover,)),
+          child: 
+        Stack(children: [Container(), Context])));
   }
 }
