@@ -40,7 +40,7 @@ class _LoginNamNuState extends State<LoginNamNu> {
     Widget Login = Text(
       'Nhập thông tin',
       style: TextStyle(
-          fontWeight: FontWeight.bold, fontSize: 30, color: Colors.yellow),
+          fontWeight: FontWeight.bold, fontSize: 30, color: Colors.redAccent ),
     );
 
     Widget Hoten(String title) => TextField(
@@ -88,7 +88,7 @@ class _LoginNamNuState extends State<LoginNamNu> {
       },
       child: const Padding(
         padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-        child: Text('Xác nhậnn'),
+        child: Text('Xác nhận'),
       ),
     );
 
@@ -103,7 +103,7 @@ class _LoginNamNuState extends State<LoginNamNu> {
         Padding(padding: EdgeInsets.all(20)),
         Text(
           'Thông tin này dùng để xác thực và bảo vệ tài khoản của bạn tốt hơn',
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.yellow),
+          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent),
         ),
         Padding(padding: EdgeInsets.all(20)),
         Row(children: [
@@ -139,7 +139,7 @@ class _LoginNamNuState extends State<LoginNamNu> {
               child: Text(
                 'Nhập họ tên',
                 style: TextStyle(
-                    fontWeight: FontWeight.bold, color: Colors.yellow),
+                    fontWeight: FontWeight.bold, color: Colors.blueAccent),
               ),
             ),
           ],
@@ -154,7 +154,7 @@ class _LoginNamNuState extends State<LoginNamNu> {
               child: Text(
                 'Nhập Gmail',
                 style: TextStyle(
-                    fontWeight: FontWeight.bold, color: Colors.yellow),
+                    fontWeight: FontWeight.bold, color: Colors.blueAccent ),
               ),
             ),
           ],
@@ -171,6 +171,12 @@ class _LoginNamNuState extends State<LoginNamNu> {
           title: Text(widget.title),
           backgroundColor: Colors.yellow[600],
         ),
-        body: Stack(children: [Container(), Context]));
+        body:Container(decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('image/b.png'),
+                fit: BoxFit.cover,)),
+          child: 
+        
+         Stack(children: [Container(), Context])));
   }
 }
