@@ -69,7 +69,7 @@ class _LoginPageState extends State<LoginPage> {
 
     return Scaffold(
       backgroundColor: Colors.deepPurpleAccent[400],
-      body: SingleChildScrollView(child:  Container(
+      body: Container(
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('image/b.png'),
@@ -132,9 +132,9 @@ class _LoginPageState extends State<LoginPage> {
             )
           ],
         ),
-      ),)
+      ),);
      
-      );
+      
   }
 }
 
