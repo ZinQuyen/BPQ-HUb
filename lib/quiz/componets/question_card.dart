@@ -16,6 +16,8 @@ class QuestionCard extends StatelessWidget {
   
 
   final Question question;
+
+  
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -29,7 +31,7 @@ class QuestionCard extends StatelessWidget {
           children: [
             Text(
              question.question,
-              style: TextStyle(color: Colors.red, fontSize: 40)
+              style: TextStyle(color: Colors.grey, fontSize: 40)
             ),
             SizedBox(height: 10 / 2),
           ...List.generate(

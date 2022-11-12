@@ -53,7 +53,7 @@ class _MyWidgetState extends State<MyWidget> {
       height: 70,
       child: ElevatedButton(
         style: ButtonStyle(
-          backgroundColor: MaterialStatePropertyAll<Color>(Colors.yellow),
+          backgroundColor: MaterialStatePropertyAll<Color>(Colors.grey),
         ),
         onPressed: () => {
           Navigator.of(context).popUntil((route) => route.isFirst),
@@ -85,7 +85,9 @@ class _MyWidgetState extends State<MyWidget> {
         backgroundColor: Colors.grey[900],
         appBar: AppBar(
           actions: [
-            Icon(Icons.notifications_active),
+            IconButton(onPressed: (() {
+              
+            }), icon: Icon(Icons.notifications_active))
           ],
           title: Text('BPQ Hub'),
         ),
@@ -124,7 +126,7 @@ class _MyWidgetState extends State<MyWidget> {
                             Text('100'),
                           ])),
                       Padding(
-                          padding: const EdgeInsets.only(left: 100),
+                          padding: const EdgeInsets.only(left: 90),
                           child: Row(children: [
                             Icon(
                               Icons.diamond_rounded,

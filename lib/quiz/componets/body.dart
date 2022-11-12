@@ -41,11 +41,11 @@ class Body extends StatelessWidget {
               child: Text.rich(
                 TextSpan(
                     text: "Question 1",
-                    style: Theme.of(context).textTheme.headline4,
+                    style: TextStyle(color: Colors.white , fontSize: 50),
                     children: [
                       TextSpan(
                         text: "/10",
-                        style: Theme.of(context).textTheme.headline5,
+                        style: TextStyle(color: Colors.white, fontSize: 25),
                       )
                     ]),
               ),

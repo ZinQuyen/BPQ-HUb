@@ -50,6 +50,16 @@ void onInit() {
   super.onInit();
 }
 
+void checkAns (Question question , int selectedIndex)
+{
+  _isAnswered = true; 
+_correctAns = question.answer;
+_selectedAns = selectedIndex;
 
+
+if (_correctAns == _selectedAns) _numOfCorrectAns++;
+_animationController.stop();
+update();
 
 } 
+}
