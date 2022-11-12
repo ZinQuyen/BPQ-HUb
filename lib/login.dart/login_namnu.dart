@@ -103,7 +103,7 @@ class _LoginNamNuState extends State<LoginNamNu> {
         Padding(padding: EdgeInsets.all(20)),
         Text(
           'Thông tin này dùng để xác thực và bảo vệ tài khoản của bạn tốt hơn',
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent),
+          style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20, color: Colors.blueAccent),
         ),
         Padding(padding: EdgeInsets.all(20)),
         Row(children: [
@@ -139,7 +139,7 @@ class _LoginNamNuState extends State<LoginNamNu> {
               child: Text(
                 'Nhập họ tên',
                 style: TextStyle(
-                    fontWeight: FontWeight.bold, color: Colors.blueAccent),
+                    fontWeight: FontWeight.bold,fontSize: 20, color: Colors.blueAccent),
               ),
             ),
           ],
@@ -154,7 +154,7 @@ class _LoginNamNuState extends State<LoginNamNu> {
               child: Text(
                 'Nhập Gmail',
                 style: TextStyle(
-                    fontWeight: FontWeight.bold, color: Colors.blueAccent ),
+                    fontWeight: FontWeight.bold,fontSize: 20, color: Colors.blueAccent ),
               ),
             ),
           ],
