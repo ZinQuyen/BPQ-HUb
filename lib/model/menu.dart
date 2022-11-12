@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:phan04_baitap1/screens/history.dart';
 import '../login.dart/login_welcome.dart';
 import '../screens/Account.dart';
 import '../screens/Home.dart';
@@ -49,7 +50,7 @@ class _MenuState extends State<Menu> {
             onTap: () {
               Navigator.of(context).popUntil((route) => route.isFirst);
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => LoginPage()));
+                  MaterialPageRoute(builder: (context) => HistoryMatch()));
             }
           ),
           ListTile(
