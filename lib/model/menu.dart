@@ -71,8 +71,6 @@ class _MenuState extends State<Menu> {
                   MaterialPageRoute(builder: (context) => LoginPage()));
             }
           ),
-
-          
         ],
       ),
     );
