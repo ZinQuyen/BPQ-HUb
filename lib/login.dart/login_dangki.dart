@@ -108,7 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text(
                   'Nhập tài khoản',
                   style: TextStyle(
-                      fontWeight: FontWeight.bold, color: Colors.yellow),
+                      fontWeight: FontWeight.bold, color: Colors.blueAccent),
                 ),
               ),
             ],
@@ -124,7 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text(
                 'Mật khẩu 6 số để bảo vệ an toàn',
                 style: TextStyle(
-                    fontWeight: FontWeight.bold, color: Colors.yellow),
+                    fontWeight: FontWeight.bold, color: Colors.blueAccent),
               ),
             ),
           ],
@@ -139,7 +139,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text(
                 'Nhập lại mật khẩu',
                 style: TextStyle(
-                    fontWeight: FontWeight.bold, color: Colors.yellow),
+                    fontWeight: FontWeight.bold, color: Colors.blueAccent),
               ),
             ),
           ],
