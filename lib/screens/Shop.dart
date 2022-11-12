@@ -40,7 +40,7 @@ class _ShoppingState extends State<Shopping> {
                    image: AssetImage(
                      'image/sword.png',
                    ),
-                   height: 90,
+                   height: 95,
                    
                  ),
                  Text('Kiếm thần thánh'),
@@ -59,7 +59,7 @@ class _ShoppingState extends State<Shopping> {
                    image: AssetImage(
                      'image/thunder.png',
                    ),
-                   height: 90,
+                   height: 95,
                    
                  ),
                  Text('Năng lượng'),
@@ -78,7 +78,7 @@ class _ShoppingState extends State<Shopping> {
                    image: AssetImage(
                      'image/shield.png',
                    ),
-                   height: 90,
+                   height: 95,
                    
                  ),
                  Text('Khiên thái dương'),
@@ -97,7 +97,7 @@ class _ShoppingState extends State<Shopping> {
                    image: AssetImage(
                      'image/dm.png',
                    ),
-                   height: 90,
+                   height: 95,
                    
                  ),
                  Text('Kim cương'),
