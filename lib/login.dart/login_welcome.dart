@@ -69,7 +69,8 @@ class _LoginPageState extends State<LoginPage> {
 
     return Scaffold(
       backgroundColor: Colors.deepPurpleAccent[400],
-      body: Container(
+      body: 
+      Container(
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('image/b.png'),
@@ -92,7 +93,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(right: 300),
+                    padding: const EdgeInsets.only(right: 280),
                     child: text1,
                   ),
                   Padding(
@@ -117,7 +118,7 @@ class _LoginPageState extends State<LoginPage> {
                       )
                     ],
                   ),
-                  Padding(padding: EdgeInsets.only(top: 10)),
+                  const Padding(padding: EdgeInsets.only(top: 10)),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
@@ -133,7 +134,7 @@ class _LoginPageState extends State<LoginPage> {
           ],
         ),
       ),
-    );
+      );
   }
 }
 

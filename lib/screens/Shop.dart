@@ -16,7 +16,7 @@ class _ShoppingState extends State<Shopping> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Cửa hàng'),
+        title: const Text('Cửa hàng Item'),
         leading: IconButton(onPressed: (() {
           Navigator.push(context, MaterialPageRoute(builder: ((context) => MyWidget(title: 'BPQ Hub',))));
         }), icon: Icon(Icons.arrow_back)),
@@ -25,9 +25,9 @@ class _ShoppingState extends State<Shopping> {
       drawer: const Menu(),
       body: GridView.count(
         primary: false,
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(5),
         crossAxisSpacing: 20,
-        mainAxisSpacing: 40,
+        mainAxisSpacing: 30,
         crossAxisCount: 2,
         children: <Widget>[
           Container(
@@ -40,7 +40,7 @@ class _ShoppingState extends State<Shopping> {
                    image: AssetImage(
                      'image/sword.png',
                    ),
-                   height: 100,
+                   height: 90,
                    
                  ),
                  Text('Kiếm thần thánh'),
@@ -59,7 +59,7 @@ class _ShoppingState extends State<Shopping> {
                    image: AssetImage(
                      'image/thunder.png',
                    ),
-                   height: 100,
+                   height: 90,
                    
                  ),
                  Text('Năng lượng'),
@@ -78,7 +78,7 @@ class _ShoppingState extends State<Shopping> {
                    image: AssetImage(
                      'image/shield.png',
                    ),
-                   height: 100,
+                   height: 90,
                    
                  ),
                  Text('Khiên thái dương'),
@@ -97,7 +97,7 @@ class _ShoppingState extends State<Shopping> {
                    image: AssetImage(
                      'image/dm.png',
                    ),
-                   height: 100,
+                   height: 90,
                    
                  ),
                  Text('Kim cương'),

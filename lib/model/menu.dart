@@ -23,8 +23,7 @@ class _MenuState extends State<Menu> {
             decoration: BoxDecoration(
               color: Colors.blue,
             ),
-            child: Text('Menu')
-            
+            child:  Text('Menu'),
           ),
         ListTile(
             leading: const Icon(Icons.account_circle),

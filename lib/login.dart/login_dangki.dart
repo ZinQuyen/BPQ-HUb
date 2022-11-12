@@ -104,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsets.only(right: 250),
+                padding: EdgeInsets.only(right: 225),
                 child: Text(
                   'Nhập tài khoản',
                   style: TextStyle(
@@ -120,10 +120,11 @@ class _MyHomePageState extends State<MyHomePage> {
         Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(right: 142),
+              padding: EdgeInsets.only(right: 45),
               child: Text(
                 'Mật khẩu 6 số để bảo vệ an toàn',
                 style: TextStyle(
+                    fontSize: 20,
                     fontWeight: FontWeight.bold, color: Colors.blueAccent),
               ),
             ),
@@ -135,7 +136,7 @@ class _MyHomePageState extends State<MyHomePage> {
         Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(right: 230),
+              padding: EdgeInsets.only(right: 210),
               child: Text(
                 'Nhập lại mật khẩu',
                 style: TextStyle(
