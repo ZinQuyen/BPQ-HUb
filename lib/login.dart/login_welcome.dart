@@ -144,11 +144,11 @@ Widget Login = Text(
 );
 Widget text1 = Text(
   'Tên đăng nhập',
-  style: TextStyle(fontWeight: FontWeight.bold, color: Colors.yellow),
+  style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent),
 );
 Widget text2 = Text(
   'Mật khẩu',
-  style: TextStyle(fontWeight: FontWeight.bold, color: Colors.yellow),
+  style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent),
 );
 Widget dangki = Text(
   'Đăng ký',
