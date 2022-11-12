@@ -23,7 +23,7 @@ class _MenuState extends State<Menu> {
             decoration: BoxDecoration(
               color: Colors.blue,
             ),
-            child:  Text('Menu'),
+            child:  Text('MENU')
           ),
         ListTile(
             leading: const Icon(Icons.account_circle),
@@ -44,6 +44,15 @@ class _MenuState extends State<Menu> {
             },
           ),
           ListTile(
+            leading: const Icon(Icons.exit_to_app),
+            title: const Text('Lịch sử đấu'),
+            onTap: () {
+              Navigator.of(context).popUntil((route) => route.isFirst);
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => LoginPage()));
+            }
+          ),
+          ListTile(
             leading: const Icon(Icons.account_circle),
             title: const Text('Thông Tin'),
             onTap: () {
@@ -61,6 +70,7 @@ class _MenuState extends State<Menu> {
                   MaterialPageRoute(builder: (context) => LoginPage()));
             }
           ),
+
           
         ],
       ),
