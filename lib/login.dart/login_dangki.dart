@@ -108,6 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text(
                   'Nhập tài khoản',
                   style: TextStyle(
+                    fontSize: 20,
                       fontWeight: FontWeight.bold, color: Colors.blueAccent),
                 ),
               ),
@@ -140,6 +141,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text(
                 'Nhập lại mật khẩu',
                 style: TextStyle(
+                  fontSize: 20,
                     fontWeight: FontWeight.bold, color: Colors.blueAccent),
               ),
             ),
