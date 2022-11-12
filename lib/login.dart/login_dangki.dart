@@ -156,6 +156,12 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Colors.yellow[600],
           title: Text(widget.title),
         ),
-        body: Stack(children: [Container(), Context]));
+        body: Container(decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('image/b.png'),
+                fit: BoxFit.cover,)),
+          child: 
+        
+        Stack(children: [Container(), Context])));
   }
 }
