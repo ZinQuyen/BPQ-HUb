@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:phan04_baitap1/model/sound.dart';
 import 'model/menu.dart';
 import 'screens/Shop.dart';
 import 'login.dart/login_welcome.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'BPQ Hub',
       theme: ThemeData.dark(),
-      home: LoginPage(),
+      home: SoundSetting(),
     );
   }
 }

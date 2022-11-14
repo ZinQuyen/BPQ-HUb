@@ -1,6 +1,8 @@
 
 
 
+import 'package:phan04_baitap1/model/sound.dart';
+
 import '../model/menu.dart';
 import 'package:flutter/material.dart';
 
@@ -51,7 +53,10 @@ class _SettingScreenState extends State<SettingScreen> {
                     style: ButtonStyle(
                         backgroundColor:
                             MaterialStatePropertyAll<Color>(Colors.blueAccent)),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, 
+                      MaterialPageRoute(builder: (context) => SoundSetting()));
+                    },
                     child: const Padding(
                       padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
                       child: Text('Âm thanh',
