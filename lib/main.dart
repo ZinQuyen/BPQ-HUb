@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'BPQ Hub',
       theme: ThemeData.dark(),
-      home: SoundSetting(),
+      home: LoginPage(),
     );
   }
 }

@@ -24,7 +24,7 @@ class _MenuState extends State<Menu> {
             decoration: BoxDecoration(
               color: Colors.blue,
             ),
-            child:  Text('MENU')
+            child: Text('menu')
           ),
         ListTile(
             leading: const Icon(Icons.account_circle),
@@ -71,8 +71,6 @@ class _MenuState extends State<Menu> {
                   MaterialPageRoute(builder: (context) => LoginPage()));
             }
           ),
-
-          
         ],
       ),
     );

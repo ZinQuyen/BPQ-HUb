@@ -1,4 +1,3 @@
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -38,17 +37,17 @@ class Body extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Text.rich(
+              child: Obx((() => Text.rich(
                 TextSpan(
-                    text: "Question 1",
-                    style: TextStyle(color: Colors.white , fontSize: 50),
+                    text: "Question ${_questionController.questionNumber.value}",
+                    style: TextStyle(color: Colors.white, fontSize: 50),
                     children: [
                       TextSpan(
-                        text: "/10",
+                        text: "/${_questionController.questions.length}",
                         style: TextStyle(color: Colors.white, fontSize: 25),
                       )
                     ]),
-              ),
+              )))
             ),
             Divider(thickness: 1.5),
             SizedBox(
@@ -56,12 +55,12 @@ class Body extends StatelessWidget {
             ),
             Expanded(
                 child: PageView.builder(
+                  physics: NeverScrollableScrollPhysics(),
+                  onPageChanged: _questionController.updateTheQnNum,
+                  controller: _questionController.pageController,
                     itemCount: _questionController.questions.length,
                     itemBuilder: ((context, index) => QuestionCard(
                           question: _questionController.questions[index],
-
-
-                          
                         ))))
           ]),
         )

@@ -38,7 +38,6 @@ class _SettingScreenState extends State<SettingScreen> {
             ),
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
-        
           padding: EdgeInsets.all(20),
           margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: Column(

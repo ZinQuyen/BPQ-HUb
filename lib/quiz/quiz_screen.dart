@@ -1,3 +1,6 @@
+import 'package:get/get.dart';
+import 'package:phan04_baitap1/controller/question_controller.dart';
+
 import '../quiz/componets/body.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +14,7 @@ class QuizScreen extends StatefulWidget {
 class _QuizScreenState extends State<QuizScreen> {
   @override
   Widget build(BuildContext context) {
+    QuestionController _controller = Get.put(QuestionController());
     Color getColor(Set<MaterialState> states) {
       const Set<MaterialState> interactiveStates = <MaterialState>{
         MaterialState.pressed,
@@ -31,7 +35,7 @@ class _QuizScreenState extends State<QuizScreen> {
               style: ButtonStyle(
                 foregroundColor: MaterialStateProperty.resolveWith(getColor),
       ),
-              onPressed: () {},
+              onPressed: _controller.nextQuestion,
               child: Text("Skip"))
         ],
       ),
