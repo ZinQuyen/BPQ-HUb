@@ -107,6 +107,42 @@ class _ShoppingState extends State<Shopping> {
               ],
             ),
           ),
+          Container(
+            padding: const EdgeInsets.all(5),
+            color: Colors.teal[100],
+            child: Column(
+              children: [
+                Padding(padding: EdgeInsets.all(5.0)),
+                Image(
+                  image: AssetImage(
+                    'image/hint.png',
+                  ),
+                  height: 95,
+                ),
+                Text('Vật phẩm gợi ý'),
+                // Text('100'),
+                ElevatedButton(onPressed: (() {}), child: const Text('Mua'))
+              ],
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(5),
+            color: Colors.teal[100],
+            child: Column(
+              children: [
+                Padding(padding: EdgeInsets.all(5.0)),
+                Image(
+                  image: AssetImage(
+                    'image/thedoiten.jpg',
+                  ),
+                  height: 95,
+                ),
+                Text('Thẻ đổi tên'),
+                // Text('100'),
+                ElevatedButton(onPressed: (() {}), child: const Text('Mua'))
+              ],
+            ),
+          ),
         ],
       ),
     );

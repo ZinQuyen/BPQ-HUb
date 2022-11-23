@@ -135,7 +135,7 @@ class _LoginNamNuState extends State<LoginNamNu> {
         Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(right: 250),
+              padding: EdgeInsets.only(right: 200),
               child: Text(
                 'Nhập họ tên',
                 style: TextStyle(
@@ -150,7 +150,7 @@ class _LoginNamNuState extends State<LoginNamNu> {
         Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(right: 250),
+              padding: EdgeInsets.only(right: 200),
               child: Text(
                 'Nhập Gmail',
                 style: TextStyle(

@@ -1,5 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
+import 'package:phan04_baitap1/screens/card.dart';
 import 'package:phan04_baitap1/screens/history.dart';
 import '../login.dart/login_welcome.dart';
 import '../screens/Account.dart';
@@ -45,6 +47,15 @@ class _MenuState extends State<Menu> {
             },
           ),
           ListTile(
+            leading: const Icon(Icons.card_giftcard),
+            title: const Text('Nạp thẻ'),
+            onTap: () {
+              Navigator.of(context).popUntil((route) => route.isFirst);
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => CardScreen()));
+            },
+          ),
+          ListTile(
             leading: const Icon(Icons.exit_to_app),
             title: const Text('Lịch sử đấu'),
             onTap: () {
@@ -66,13 +77,31 @@ class _MenuState extends State<Menu> {
             leading: const Icon(Icons.exit_to_app),
             title: const Text('Đăng xuất'),
             onTap: () {
-              Navigator.of(context).popUntil((route) => route.isFirst);
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => LoginPage()));
+              _onBackButtonPressed(context);
             }
           ),
         ],
       ),
     );
+  }
+
+  Future<bool> _onBackButtonPressed(BuildContext context) async{
+    bool? exitApp = await showDialog(context: context, builder: (BuildContext context) {
+      return AlertDialog(
+        title: const Text('Có phải bạn muốn đăng xuất ?'),
+        content: const Text('Bạn có muốn đóng ứng dụng'),
+        actions: <Widget>[
+          TextButton(onPressed: (() {
+            Navigator.of(context).pop(false);
+          }), child: const Text('Không')),
+          TextButton(onPressed: (() {
+            Navigator.of(context).pop(true);
+          }), child: const Text('Có')),
+        ],
+      );
+
+      
+    });
+    return exitApp ?? false;
   }
 }

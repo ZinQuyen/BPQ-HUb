@@ -92,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(right: 280),
+                    padding: const EdgeInsets.only(right: 250),
                     child: text1,
                   ),
                   Padding(
@@ -100,7 +100,7 @@ class _LoginPageState extends State<LoginPage> {
                     child:Hoten('Họ Tên') ,
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(right: 330),
+                    padding: const EdgeInsets.only(right: 300),
                     child: text2,
                   ),
                   Padding(

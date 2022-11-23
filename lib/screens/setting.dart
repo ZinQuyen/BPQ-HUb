@@ -75,7 +75,7 @@ class _SettingScreenState extends State<SettingScreen> {
                         backgroundColor:
                             MaterialStatePropertyAll<Color>(Colors.blueAccent)),
                     onPressed: () {},
-                    child: Text('Liên kết',style: TextStyle(
+                    child: Text('Đổi tên tài khoản',style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.bold)),
                   ),
                 ),
@@ -90,7 +90,7 @@ class _SettingScreenState extends State<SettingScreen> {
                         backgroundColor:
                             MaterialStatePropertyAll<Color>(Colors.blueAccent)),
                     onPressed: () {},
-                    child: Text('Hỗ trợ',style: TextStyle(
+                    child: Text('Đổi mật khẩu',style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.bold)),
                   ),
                 ),
