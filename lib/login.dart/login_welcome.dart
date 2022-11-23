@@ -67,16 +67,16 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
 
-    return Scaffold(
-      backgroundColor: Colors.deepPurpleAccent[400],
-      body: Container(
+    return 
+      Container(
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('image/b.png'),
                 fit: BoxFit.cover,
               ),
             ),
-        child: Column(
+          
+        child:Scaffold(backgroundColor: Colors.transparent,body: SingleChildScrollView(child: Container(child:Column(
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -92,15 +92,15 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(right: 250),
+                    padding: const EdgeInsets.only(right: 280),
                     child: text1,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child:Hoten('Họ Tên') ,
+                    child: Hoten('Họ Tên'),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(right: 300),
+                    padding: const EdgeInsets.only(right: 330),
                     child: text2,
                   ),
                   Padding(
@@ -131,10 +131,9 @@ class _LoginPageState extends State<LoginPage> {
               ),
             )
           ],
-        ),
-      ),);
-     
-      
+        ), ),),)
+         
+      );
   }
 }
 
@@ -145,11 +144,11 @@ Widget Login = Text(
 );
 Widget text1 = Text(
   'Tên đăng nhập',
-  style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20, color: Colors.blueAccent),
+  style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent),
 );
 Widget text2 = Text(
   'Mật khẩu',
-  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.blueAccent),
+  style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent),
 );
 Widget dangki = Text(
   'Đăng ký',
