@@ -18,5 +18,4 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark(),
       home: LoginPage(),
     );
-  }
-}
+  }}

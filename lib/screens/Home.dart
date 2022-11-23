@@ -81,79 +81,85 @@ class _MyWidgetState extends State<MyWidget> {
       ]),
     );
 
-    return Scaffold(
-        backgroundColor: Colors.grey[900],
-        appBar: AppBar(
-          actions: [
-            IconButton(onPressed: (() {
+    return Container(
+      decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('image/b.png'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+          
+          appBar: AppBar(
+            actions: [
+              IconButton(onPressed: (() {
+                
+              }), icon: Icon(Icons.notifications_active))
+            ],
+            title: Text('BPQ Hub'),
+          ),
+          drawer: const Menu(),
+          body: SingleChildScrollView(child: Container(
               
-            }), icon: Icon(Icons.notifications_active))
-          ],
-          title: Text('BPQ Hub'),
-        ),
-        drawer: const Menu(),
-        body: Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('image/b.png'),
-                fit: BoxFit.cover,
+              child: Column(children: [
+                Row(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Row(children: [
+                              Icon(
+                                Icons.energy_savings_leaf_sharp,
+                                size: 50,
+                                color: Colors.blue,
+                              ),
+                              Text('5/5')
+                            ])),
+                        Padding(
+                            padding: const EdgeInsets.only(left: 100),
+                            child: Row(children: [
+                              Icon(
+                                Icons.money_rounded,
+                                size: 35,
+                                color: Colors.yellow,
+                              ),
+                              Text('100'),
+                            ])),
+                        Padding(
+                            padding: const EdgeInsets.only(left: 90),
+                            child: Row(children: [
+                              Icon(
+                                Icons.diamond_rounded,
+                                size: 35,
+                                color: Colors.red,
+                              ),
+                              Text('100'),
+                            ])),
+                      ],
+                    )
+                  ],
+                ),
+                
+                Padding(padding: EdgeInsets.only(top: 50)),
+                Column(
+                  children: [
+                    Icon(
+                      Icons.gamepad_sharp,
+                      size: 150,
+                    )
+                  ],
+                ),
+                Padding(padding: EdgeInsets.only(top: 50)),
+                Stack(children: [Container(), Context]),
+              ])
+              ),)
+           
               ),
-            ),
-            child: Column(children: [
-              Row(
-                children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                          padding: const EdgeInsets.only(left: 10),
-                          child: Row(children: [
-                            Icon(
-                              Icons.energy_savings_leaf_sharp,
-                              size: 50,
-                              color: Colors.blue,
-                            ),
-                            Text('5/5')
-                          ])),
-                      Padding(
-                          padding: const EdgeInsets.only(left: 100),
-                          child: Row(children: [
-                            Icon(
-                              Icons.money_rounded,
-                              size: 35,
-                              color: Colors.yellow,
-                            ),
-                            Text('100'),
-                          ])),
-                      Padding(
-                          padding: const EdgeInsets.only(left: 90),
-                          child: Row(children: [
-                            Icon(
-                              Icons.diamond_rounded,
-                              size: 35,
-                              color: Colors.red,
-                            ),
-                            Text('100'),
-                          ])),
-                    ],
-                  )
-                ],
-              ),
-              
-              Padding(padding: EdgeInsets.only(top: 50)),
-              Column(
-                children: [
-                  Icon(
-                    Icons.gamepad_sharp,
-                    size: 150,
-                  )
-                ],
-              ),
-              Padding(padding: EdgeInsets.only(top: 50)),
-              Stack(children: [Container(), Context]),
-            ])
-            ),
-            );
+    );
             
   }
 }

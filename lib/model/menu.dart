@@ -19,11 +19,16 @@ class _MenuState extends State<Menu> {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
+          
           const DrawerHeader(
             decoration: BoxDecoration(
+              
               color: Colors.blue,
+              
             ),
+            
             child:  Text('Menu'),
+          
           ),
         ListTile(
             leading: const Icon(Icons.account_circle),
