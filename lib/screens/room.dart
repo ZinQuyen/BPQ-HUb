@@ -70,91 +70,108 @@ class _RoomScreenState extends State<RoomScreen> {
                   width: 5,
                 ),
               ),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          width: double.infinity,
-                          height: 70,
-                          child: Card(
-                            color: Colors.grey,
-                            child: Center(
-                              child: Text(
-                                'Phòng 1',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                              ), //Text
-                            ), //Center
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            width: double.infinity,
+                            height: 70,
+                            child: Card(
+                              color: Colors.grey,
+                              child: Center(
+                                child: Text(
+                                  'Phòng 1',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ), //Text
+                              ), //Center
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          width: double.infinity,
-                          height: 70,
-                          child: Card(
-                            color: Colors.grey,
-                            child: Center(
-                              child: Text(
-                                'Phòng 2',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                              ), //Text
-                            ), //Center
+                          SizedBox(
+                            width: double.infinity,
+                            height: 70,
+                            child: Card(
+                              color: Colors.grey,
+                              child: Center(
+                                child: Text(
+                                  'Phòng 2',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ), //Text
+                              ), //Center
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          width: double.infinity,
-                          height: 70,
-                          child: Card(
-                            color: Colors.grey,
-                            child: Center(
-                              child: Text(
-                                'Phòng 3',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                              ), //Text
-                            ), //Center
+                          SizedBox(
+                            width: double.infinity,
+                            height: 70,
+                            child: Card(
+                              color: Colors.grey,
+                              child: Center(
+                                child: Text(
+                                  'Phòng 3',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ), //Text
+                              ), //Center
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          width: double.infinity,
-                          height: 70,
-                          child: Card(
-                            color: Colors.grey,
-                            child: Center(
-                              child: Text(
-                                'Phòng 4',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                              ), //Text
-                            ), //Center
+                          SizedBox(
+                            width: double.infinity,
+                            height: 70,
+                            child: Card(
+                              color: Colors.grey,
+                              child: Center(
+                                child: Text(
+                                  'Phòng 4',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ), //Text
+                              ), //Center
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          width: double.infinity,
-                          height: 70,
-                          child: Card(
-                            color: Colors.grey,
-                            child: Center(
-                              child: Text(
-                                'Phòng 5',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                              ), //Text
-                            ), //Center
+                          SizedBox(
+                            width: double.infinity,
+                            height: 70,
+                            child: Card(
+                              color: Colors.grey,
+                              child: Center(
+                                child: Text(
+                                  'Phòng 5',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ), //Text
+                              ), //Center
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
+                          SizedBox(
+                            width: double.infinity,
+                            height: 70,
+                            child: Card(
+                              color: Colors.grey,
+                              child: Center(
+                                child: Text(
+                                  'Phòng 6',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ), //Text
+                              ), //Center
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
             Row(

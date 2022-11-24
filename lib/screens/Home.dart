@@ -25,7 +25,7 @@ class _MyWidgetState extends State<MyWidget> {
           
         ),
         onPressed: () => {
-          // Navigator.push(context, MaterialPageRoute(builder: (context) => QuizScreen(),))
+           Navigator.push(context, MaterialPageRoute(builder: (context) => QuizScreen(),))
         },
         child: const Padding(
           padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
