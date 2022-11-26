@@ -1,9 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 
 import '../../controller/question_controller.dart';
-
 
 class ProgressBar extends StatelessWidget {
   const ProgressBar({
@@ -20,47 +18,50 @@ class ProgressBar extends StatelessWidget {
         borderRadius: BorderRadius.circular(50),
       ),
       child: GetBuilder<QuestionController>(
-        init: QuestionController(),
-        builder: (controller) {
-          return Stack(children: [
-            LayoutBuilder(
-                builder: (context, constraints) => Container(
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50),
-                      ),
-                      child: Stack(children: [
-                        LayoutBuilder(
-                            builder: (context, constraints) => Container(
-                                  width: constraints.maxWidth * controller.animation.value,
-                                  decoration: BoxDecoration(
-                                      gradient: LinearGradient(colors: [
-                                        Colors.blueGrey,
-                                        Colors.white
-                                      ]),
-                                      borderRadius: BorderRadius.circular(50)),
-                                )),
-                        Positioned.fill(
-                            child: Padding(
-                          padding: const EdgeInsets.all(5),
-                          child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  '${(controller.animation.value * 15).round() } sec',
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                                Image.asset(
-                                  'image/time-span.png',
-                                  height: 100,
-                                )
-                              ]),
-                        ))
-                      ]),
-                    )),
-          ]);
-        }
-      ),
+          init: QuestionController(),
+          builder: (controller) {
+            return Stack(children: [
+              LayoutBuilder(
+                  builder: (context, constraints) => Container(
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                        child: Stack(children: [
+                          LayoutBuilder(
+                              builder: (context, constraints) => Container(
+                                    width: constraints.maxWidth *
+                                        controller.animation.value,
+                                    decoration: BoxDecoration(
+                                        gradient: LinearGradient(colors: [
+                                          Colors.blueGrey,
+                                          Colors.white
+                                        ]),
+                                        borderRadius:
+                                            BorderRadius.circular(50)),
+                                  )),
+                          Positioned.fill(
+                              child: Padding(
+                            padding: const EdgeInsets.all(5),
+                            child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    '${(controller.animation.value * 15).round()} sec',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                  ),
+                                  Image.asset(
+                                    'image/time-span.png',
+                                    height: 100,
+                                  )
+                                ]),
+                          ))
+                        ]),
+                      )),
+            ]);
+          }),
     );
   }
 }

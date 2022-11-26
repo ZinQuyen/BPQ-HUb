@@ -39,7 +39,8 @@ class _LoginPageState extends State<LoginPage> {
     );
     Widget dangkii = ElevatedButton(
       style: ButtonStyle(
-          backgroundColor: const MaterialStatePropertyAll<Color>(Colors.blueGrey),
+          backgroundColor:
+              const MaterialStatePropertyAll<Color>(Colors.blueGrey),
           shape: MaterialStateProperty.all(RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30.0)))),
       onPressed: () {
@@ -58,13 +59,16 @@ class _LoginPageState extends State<LoginPage> {
     );
     Widget quenMK = ElevatedButton(
       style: ButtonStyle(
-          backgroundColor: const MaterialStatePropertyAll<Color>(Colors.blueGrey),
+          backgroundColor:
+              const MaterialStatePropertyAll<Color>(Colors.blueGrey),
           shape: MaterialStateProperty.all(RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30.0)))),
       onPressed: () {
         Navigator.of(context).popUntil((route) => route.isFirst);
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const quenpass(title: 'back')));
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => const quenpass(title: 'back')));
       },
       child: const Padding(
         padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
@@ -90,15 +94,15 @@ class _LoginPageState extends State<LoginPage> {
         //         fit: BoxFit.cover,
         //       ),
         //     ),
-        child:Scaffold(
+        child: Scaffold(
           backgroundColor: Colors.transparent,
-        body: SingleChildScrollView(
-          child: Container(
-            child:Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+          body: SingleChildScrollView(
+              child: Container(
+            child: Column(
               children: [
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.center,
+                //   children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -152,56 +156,52 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 )
               ],
-            ),]
+            ),
           )),
-        ))
-        );  
-            Container(
-              margin: EdgeInsets.only(top: 70),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(right: 280),
-                    child: text1,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Hoten('Họ Tên'),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 330),
-                    child: text2,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Pass('Mật Khẩu'),
-                  ),
-                  btn,
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(right: 30),
-                        child: dangkii,
-                      )
-                    ],
-                  ),
-                  const Padding(padding: EdgeInsets.only(top: 10)),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(right: 25),
-                        child: quenMK,
-                      )
-                    ],
-                  )
-                ],
-              ),
-            );
-      
-    
-
+        ));
+    Container(
+      margin: EdgeInsets.only(top: 70),
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(right: 280),
+            child: text1,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Hoten('Họ Tên'),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 330),
+            child: text2,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Pass('Mật Khẩu'),
+          ),
+          btn,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 30),
+                child: dangkii,
+              )
+            ],
+          ),
+          const Padding(padding: EdgeInsets.only(top: 10)),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 25),
+                child: quenMK,
+              )
+            ],
+          )
+        ],
+      ),
+    );
   }
 }
 
@@ -212,7 +212,6 @@ Widget Login = const Text(
 );
 Widget text1 = const Text(
   'Tên đăng nhập',
-
   style: TextStyle(
       fontWeight: FontWeight.bold, fontSize: 20, color: Colors.blueAccent),
 );

@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:phan04_baitap1/quiz/componets/level.dart';
 import 'package:phan04_baitap1/screens/room.dart';
 
 import '../quiz/quiz_screen.dart';
@@ -25,7 +26,7 @@ class _MyWidgetState extends State<MyWidget> {
           
         ),
         onPressed: () => {
-           Navigator.push(context, MaterialPageRoute(builder: (context) => QuizScreen(),))
+           Navigator.push(context, MaterialPageRoute(builder: (context) => LevelScreen(),))
         },
         child: const Padding(
           padding: EdgeInsets.fromLTRB(10, 10, 10, 10),

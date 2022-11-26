@@ -83,11 +83,14 @@ class _RoomScreenState extends State<RoomScreen> {
                             child: Card(
                               color: Colors.grey,
                               child: Center(
-                                child: Text(
-                                  'Phòng 1',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
+                                child: TextButton(
+                                  child: Text(
+                                    'Phong 6',
+                                    style: TextStyle(
+                                        color: Colors.red,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  onPressed: (() {}),
                                 ), //Text
                               ), //Center
                             ),
@@ -98,11 +101,14 @@ class _RoomScreenState extends State<RoomScreen> {
                             child: Card(
                               color: Colors.grey,
                               child: Center(
-                                child: Text(
-                                  'Phòng 2',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
+                                child: TextButton(
+                                  child: Text(
+                                    'Phong 6',
+                                    style: TextStyle(
+                                        color: Colors.red,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  onPressed: (() {}),
                                 ), //Text
                               ), //Center
                             ),
@@ -113,11 +119,32 @@ class _RoomScreenState extends State<RoomScreen> {
                             child: Card(
                               color: Colors.grey,
                               child: Center(
-                                child: Text(
-                                  'Phòng 3',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
+                                child: TextButton(
+                                  child: Text(
+                                    'Phong 6',
+                                    style: TextStyle(
+                                        color: Colors.red,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  onPressed: (() {}),
+                                ),//Text
+                              ), //Center
+                            ),
+                          ),
+                          SizedBox(
+                            width: double.infinity,
+                            height: 70,
+                            child: Card(
+                              color: Colors.grey,
+                              child: Center(
+                                child: TextButton(
+                                  child: Text(
+                                    'Phong 6',
+                                    style: TextStyle(
+                                        color: Colors.red,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  onPressed: (() {}),
                                 ), //Text
                               ), //Center
                             ),
@@ -128,11 +155,14 @@ class _RoomScreenState extends State<RoomScreen> {
                             child: Card(
                               color: Colors.grey,
                               child: Center(
-                                child: Text(
-                                  'Phòng 4',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
+                                child: TextButton(
+                                  child: Text(
+                                    'Phong 6',
+                                    style: TextStyle(
+                                        color: Colors.red,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  onPressed: (() {}),
                                 ), //Text
                               ), //Center
                             ),
@@ -143,27 +173,15 @@ class _RoomScreenState extends State<RoomScreen> {
                             child: Card(
                               color: Colors.grey,
                               child: Center(
-                                child: Text(
-                                  'Phòng 5',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
-                                ), //Text
-                              ), //Center
-                            ),
-                          ),
-                          SizedBox(
-                            width: double.infinity,
-                            height: 70,
-                            child: Card(
-                              color: Colors.grey,
-                              child: Center(
-                                child: Text(
-                                  'Phòng 6',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
-                                ), //Text
+                                child: TextButton(
+                                  child: Text(
+                                    'Phong 6',
+                                    style: TextStyle(
+                                        color: Colors.red,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  onPressed: (() {}),
+                                ),
                               ), //Center
                             ),
                           ),
