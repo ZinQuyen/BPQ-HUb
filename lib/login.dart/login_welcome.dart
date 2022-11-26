@@ -28,7 +28,7 @@ class _LoginPageState extends State<LoginPage> {
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => MyWidget(
+                builder: (context) => const MyWidget(
                       title: 'BPQ Hub',
                     )));
       },
@@ -39,7 +39,7 @@ class _LoginPageState extends State<LoginPage> {
     );
     Widget dangkii = ElevatedButton(
       style: ButtonStyle(
-          backgroundColor: MaterialStatePropertyAll<Color>(Colors.blueGrey),
+          backgroundColor: const MaterialStatePropertyAll<Color>(Colors.blueGrey),
           shape: MaterialStateProperty.all(RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30.0)))),
       onPressed: () {
@@ -47,7 +47,7 @@ class _LoginPageState extends State<LoginPage> {
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => MyHomePage(
+                builder: (context) => const MyHomePage(
                       title: 'Đăng ký',
                     )));
       },
@@ -58,13 +58,13 @@ class _LoginPageState extends State<LoginPage> {
     );
     Widget quenMK = ElevatedButton(
       style: ButtonStyle(
-          backgroundColor: MaterialStatePropertyAll<Color>(Colors.blueGrey),
+          backgroundColor: const MaterialStatePropertyAll<Color>(Colors.blueGrey),
           shape: MaterialStateProperty.all(RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30.0)))),
       onPressed: () {
         Navigator.of(context).popUntil((route) => route.isFirst);
         Navigator.push(context,
-            MaterialPageRoute(builder: (context) => quenpass(title: 'back')));
+            MaterialPageRoute(builder: (context) => const quenpass(title: 'back')));
       },
       child: const Padding(
         padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
@@ -72,30 +72,32 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
     return Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('image/b.png'),
             fit: BoxFit.cover,
           ),
         ),
-        child: Scaffold(
+        // child: Scaffold(
+        //   backgroundColor: Colors.transparent,
+        //   body: SingleChildScrollView(
+        //       child: Container(
+        //     child: Column(
+        //       Container(
+        //     decoration: const BoxDecoration(
+        //       image: DecorationImage(
+        //         image: AssetImage('image/b.png'),
+        //         fit: BoxFit.cover,
+        //       ),
+        //     ),
+        child:Scaffold(
           backgroundColor: Colors.transparent,
-          body: SingleChildScrollView(
-              child: Container(
-            child: Column(
-      Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('image/b.png'),
-                fit: BoxFit.cover,
-              ),
-            ),
-          
-        child:Scaffold(backgroundColor: Colors.transparent,body: SingleChildScrollView(child: Container(child:Column(
+        body: SingleChildScrollView(
+          child: Container(
+            child:Column(
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -107,7 +109,7 @@ class _LoginPageState extends State<LoginPage> {
                   ],
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 70),
+                  margin: const EdgeInsets.only(top: 70),
                   child: Column(
                     children: [
                       Padding(
@@ -145,15 +147,15 @@ class _LoginPageState extends State<LoginPage> {
                             child: quenMK,
                           )
                         ],
-                      )
+                      ),
                     ],
                   ),
                 )
               ],
             ),]
           )),
-        ));
-      
+        ))
+        );  
             Container(
               margin: EdgeInsets.only(top: 70),
               child: Column(
@@ -196,45 +198,37 @@ class _LoginPageState extends State<LoginPage> {
                   )
                 ],
               ),
-            ),
-      )))
-      )
-    ),
-    );
+            );
+      
+    
+
   }
 }
 
-Widget Login = Text(
+Widget Login = const Text(
   'Welcome',
   style:
       TextStyle(fontWeight: FontWeight.bold, fontSize: 50, color: Colors.red),
 );
-Widget text1 = Text(
+Widget text1 = const Text(
   'Tên đăng nhập',
 
   style: TextStyle(
       fontWeight: FontWeight.bold, fontSize: 20, color: Colors.blueAccent),
 );
-Widget text2 = Text(
+Widget text2 = const Text(
   'Mật khẩu',
   style: TextStyle(
       fontWeight: FontWeight.bold, fontSize: 20, color: Colors.blueAccent),
-
-  style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent),
 );
-Widget text2 = Text(
-  'Mật khẩu',
-  style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent),
-
-);
-Widget dangki = Text(
+Widget dangki = const Text(
   'Đăng ký',
   style: TextStyle(
       decoration: TextDecoration.underline,
       fontWeight: FontWeight.bold,
       color: Colors.green),
 );
-Widget quenmatkhau = Text(
+Widget quenmatkhau = const Text(
   'Quên mật khẩu',
   style: TextStyle(
       decoration: TextDecoration.underline,
@@ -243,32 +237,32 @@ Widget quenmatkhau = Text(
 );
 
 Widget Hoten(String title) => TextField(
-      style: TextStyle(color: Colors.yellow),
+      style: const TextStyle(color: Colors.yellow),
       decoration: InputDecoration(
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderSide: BorderSide(width: 1, color: Colors.grey),
           ),
-          border: OutlineInputBorder(),
+          border: const OutlineInputBorder(),
           hintText: title,
-          hintStyle: TextStyle(color: Colors.grey)),
+          hintStyle: const TextStyle(color: Colors.grey)),
     );
 Widget Pass(String title) => TextField(
-      style: TextStyle(color: Colors.grey),
+      style: const TextStyle(color: Colors.grey),
       decoration: InputDecoration(
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderSide: BorderSide(width: 1, color: Colors.grey),
           ),
-          border: OutlineInputBorder(),
+          border: const OutlineInputBorder(),
           hintText: title,
-          hintStyle: TextStyle(color: Colors.grey)),
+          hintStyle: const TextStyle(color: Colors.grey)),
     );
 Widget textFielddd(String title) => TextField(
-      style: TextStyle(color: Colors.grey),
+      style: const TextStyle(color: Colors.grey),
       decoration: InputDecoration(
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderSide: BorderSide(width: 1, color: Colors.grey),
           ),
-          border: OutlineInputBorder(),
+          border: const OutlineInputBorder(),
           hintText: title,
-          hintStyle: TextStyle(color: Colors.grey)),
+          hintStyle: const TextStyle(color: Colors.grey)),
     );
