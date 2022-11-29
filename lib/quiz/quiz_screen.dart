@@ -39,9 +39,7 @@ class _QuizScreenState extends State<QuizScreen> {
               child: Text("Skip"))
         ],
       ),
-      body: Body(
-
-      ),
+      body: Body(),
     );
   }
 }
