@@ -37,9 +37,9 @@ class _LoginPageState extends State<LoginPage> {
         child: Text('Đăng nhập'),
       ),
     );
-    Widget dangkii = ElevatedButton(
+    Widget dangkii = TextButton(
       style: ButtonStyle(
-          backgroundColor: MaterialStatePropertyAll<Color>(Colors.blueGrey),
+          
           shape: MaterialStateProperty.all(RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30.0)))),
       onPressed: () {
@@ -56,9 +56,9 @@ class _LoginPageState extends State<LoginPage> {
         child: Text('Đăng Kí'),
       ),
     );
-    Widget quenMK = ElevatedButton(
+    Widget quenMK = TextButton(
       style: ButtonStyle(
-          backgroundColor: MaterialStatePropertyAll<Color>(Colors.blueGrey),
+          
           shape: MaterialStateProperty.all(RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30.0)))),
       onPressed: () {

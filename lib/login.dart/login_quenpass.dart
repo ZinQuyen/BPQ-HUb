@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-
+import 'package:phan04_baitap1/login.dart/login_welcome.dart';
 
 void main() {
   runApp(MaterialApp(
     title: 'Flutter Demo',
     theme: ThemeData(primarySwatch: Colors.red),
-    home: const quenpass(title: '',),
+    home: const quenpass(
+      title: '',
+    ),
   ));
 }
 
@@ -16,12 +18,12 @@ Widget build(BuildContext context) {
     theme: ThemeData(
       primarySwatch: Colors.blue,
     ),
-    home: const  quenpass(title: 'Flutter Demo Home Page'),
+    home: const quenpass(title: 'Flutter Demo Home Page'),
   );
 }
 
-class  quenpass extends StatefulWidget {
-  const  quenpass({super.key, required this.title});
+class quenpass extends StatefulWidget {
+  const quenpass({super.key, required this.title});
 
   final String title;
 
@@ -32,13 +34,13 @@ class  quenpass extends StatefulWidget {
 enum Sex { male, female }
 
 class _quenpassState extends State<quenpass> {
-
   @override
-  Widget build(BuildContext context) {
-    Widget Login = Text(
+  Widget build(BuildContext context) { 
+    Widget Login =
+     Text(
       'Đổi mật khẩu',
       style: TextStyle(
-          fontWeight: FontWeight.bold, fontSize: 30, color: Colors.red),
+          fontWeight: FontWeight.bold, fontSize: 40, color: Colors.red),
     );
 
     Widget Hoten(String title) => TextField(
@@ -79,7 +81,13 @@ class _quenpassState extends State<quenpass> {
               MaterialStatePropertyAll<Color>(Colors.yellow.withOpacity(0.8)),
           shape: MaterialStateProperty.all(RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30.0)))),
-      onPressed: () => {},
+      onPressed: () => {Navigator.of(context).popUntil((route) => route.isFirst),
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => LoginPage(
+                      
+                    )))},
       child: const Padding(
         padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
         child: Text('Xác nhận'),
@@ -88,25 +96,24 @@ class _quenpassState extends State<quenpass> {
 
     Widget Context = Container(
       width: MediaQuery.of(context).size.width / 1.1,
-      height: 500,
+    
       padding: EdgeInsets.all(20),
       margin: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-      child: Column(crossAxisAlignment: CrossAxisAlignment.center, 
-      children: [
+      child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
+        Padding(padding: EdgeInsets.only(bottom:160)),
         Login,
+        Padding(padding: EdgeInsets.only(top:70)),
         Padding(padding: EdgeInsets.all(20)),
-        
-        Padding(padding: EdgeInsets.all(20)),
- 
         Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(right: 100),
+              padding: EdgeInsets.only(right:20),
               child: Text(
                 'Mật khẩu 6 số để bảo vệ an toàn',
                 style: TextStyle(
-                  fontSize: 20,
-                    fontWeight: FontWeight.bold, color: Colors.blueAccent ),
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blueAccent),
               ),
             ),
           ],
@@ -117,12 +124,13 @@ class _quenpassState extends State<quenpass> {
         Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(right: 190),
+              padding: EdgeInsets.only(right: 135),
               child: Text(
                 'Xác nhận mật khẩu',
                 style: TextStyle(
-                  fontSize: 20,
-                    fontWeight: FontWeight.bold, color: Colors.blueAccent),
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blueAccent),
               ),
             ),
           ],
@@ -133,7 +141,24 @@ class _quenpassState extends State<quenpass> {
         btn
       ]),
     );
-    return Scaffold(
+    return Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+          image: AssetImage('image/b.png'),
+          fit: BoxFit.cover,
+        )),
+        child: Scaffold(
+          backgroundColor: Colors.transparent,
+          body: SingleChildScrollView(
+            child: Container(
+              child: Stack(
+                children: [Container(), Context],
+              ),
+            ),
+          ),
+        ));
+
+    /* Scaffold(
         backgroundColor: Colors.deepPurpleAccent[400],
         appBar: AppBar(
           title: Text(widget.title),
@@ -145,5 +170,6 @@ class _quenpassState extends State<quenpass> {
                 fit: BoxFit.cover,)),
           child: 
         Stack(children: [Container(), Context])));
+  } */
   }
 }

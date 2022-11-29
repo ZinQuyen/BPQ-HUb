@@ -99,6 +99,7 @@ class _LoginNamNuState extends State<LoginNamNu> {
       padding: EdgeInsets.all(10),
       margin: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
       child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
+        Padding(padding: EdgeInsets.only(bottom:110)),
         Login,
         Padding(padding: EdgeInsets.all(20)),
         Text(
@@ -135,7 +136,7 @@ class _LoginNamNuState extends State<LoginNamNu> {
         Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(right: 250),
+              padding: EdgeInsets.only(right: 220),
               child: Text(
                 'Nhập họ tên',
                 style: TextStyle(
@@ -150,7 +151,7 @@ class _LoginNamNuState extends State<LoginNamNu> {
         Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(right: 250),
+              padding: EdgeInsets.only(right: 220),
               child: Text(
                 'Nhập Gmail',
                 style: TextStyle(
@@ -165,18 +166,21 @@ class _LoginNamNuState extends State<LoginNamNu> {
         btn
       ]),
     );
-    return Scaffold(
-        backgroundColor: Colors.deepPurpleAccent[400],
-        appBar: AppBar(
-          title: Text(widget.title),
-          backgroundColor: Colors.yellow[600],
-        ),
-        body:Container(decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('image/b.png'),
-                fit: BoxFit.cover,)),
-          child: 
-        
-         Stack(children: [Container(), Context])));
+    return Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+          image: AssetImage('image/b.png'),
+          fit: BoxFit.cover,
+        )),
+        child: Scaffold(
+          backgroundColor: Colors.transparent,
+          body: SingleChildScrollView(
+            child: Container(
+              child: Stack(
+                children: [Container(), Context],
+              ),
+            ),
+          ),
+        ));
   }
 }

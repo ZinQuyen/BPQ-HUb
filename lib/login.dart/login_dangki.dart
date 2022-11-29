@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Widget Login = Text(
       'Tạo tài khoản',
       style: TextStyle(
-          fontWeight: FontWeight.bold, fontSize: 30, color: Colors.red),
+          fontWeight: FontWeight.bold, fontSize: 40, color: Colors.red),
     );
 
     Widget textField(String title) => TextField(
@@ -97,10 +97,11 @@ class _MyHomePageState extends State<MyHomePage> {
       margin: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
       child: Column(children: [
         Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Padding(padding: const EdgeInsets.only(top: 20), child: Login)
+          Padding(padding: const EdgeInsets.only(top: 120), child:
+           Login)
         ]),
         Container(
-          margin: EdgeInsets.only(top: 60),
+          margin: EdgeInsets.only(top: 100),
           child: Column(
             children: [
               Padding(
@@ -153,18 +154,21 @@ class _MyHomePageState extends State<MyHomePage> {
         btn
       ]),
     );
-    return Scaffold(
-        backgroundColor: Colors.deepPurpleAccent[400],
-        appBar: AppBar(
-          backgroundColor: Colors.yellow[600],
-          title: Text(widget.title),
-        ),
-        body: Container(decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('image/b.png'),
-                fit: BoxFit.cover,)),
-          child: 
-        
-        Stack(children: [Container(), Context])));
+    return Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+          image: AssetImage('image/b.png'),
+          fit: BoxFit.cover,
+        )),
+        child: Scaffold(
+          backgroundColor: Colors.transparent,
+          body: SingleChildScrollView(
+            child: Container(
+              child: Stack(
+                children: [Container(), Context],
+              ),
+            ),
+          ),
+        ));
   }
 }
