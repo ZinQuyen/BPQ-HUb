@@ -1,9 +1,13 @@
-
 import 'package:flutter/material.dart';
+import 'package:phan04_baitap1/quiz/componets/level.dart';
+import 'package:phan04_baitap1/screens/room.dart';
+import 'package:phan04_baitap1/screens/thongbao.dart';
 
+import '../quiz/componets/level.dart';
 import '../quiz/quiz_screen.dart';
 import '../screens/Shop.dart';
 import '../model/menu.dart';
+import 'room.dart';
 
 class MyWidget extends StatefulWidget {
   const MyWidget({super.key, required this.title});
@@ -24,7 +28,7 @@ class _MyWidgetState extends State<MyWidget> {
           
         ),
         onPressed: () => {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => QuizScreen(),))
+           Navigator.push(context, MaterialPageRoute(builder: (context) => LevelScreen(),))
         },
         child: const Padding(
           padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
@@ -41,7 +45,9 @@ class _MyWidgetState extends State<MyWidget> {
           backgroundColor:
               MaterialStatePropertyAll<Color>(Colors.red.withOpacity(0.8)),
         ),
-        onPressed: () => {},
+        onPressed: () => {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => RoomScreen(),))
+        },
         child: const Padding(
           padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
           child: Text('RANKING',style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
@@ -86,7 +92,7 @@ class _MyWidgetState extends State<MyWidget> {
         appBar: AppBar(
           actions: [
             IconButton(onPressed: (() {
-              
+              Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationScreen(),));
             }), icon: Icon(Icons.notifications_active))
           ],
           title: Text('BPQ Hub'),
@@ -109,14 +115,14 @@ class _MyWidgetState extends State<MyWidget> {
                           padding: const EdgeInsets.only(left: 10),
                           child: Row(children: [
                             Icon(
-                              Icons.energy_savings_leaf_sharp,
+                              Icons.favorite,
                               size: 50,
                               color: Colors.blue,
                             ),
                             Text('5/5')
                           ])),
                       Padding(
-                          padding: const EdgeInsets.only(left: 100),
+                          padding: const EdgeInsets.only(left: 170),
                           child: Row(children: [
                             Icon(
                               Icons.money_rounded,
@@ -126,7 +132,7 @@ class _MyWidgetState extends State<MyWidget> {
                             Text('100'),
                           ])),
                       Padding(
-                          padding: const EdgeInsets.only(left: 90),
+                          padding: const EdgeInsets.only(left: 10),
                           child: Row(children: [
                             Icon(
                               Icons.diamond_rounded,
@@ -140,7 +146,7 @@ class _MyWidgetState extends State<MyWidget> {
                 ],
               ),
               
-              Padding(padding: EdgeInsets.only(top: 50)),
+              Padding(padding: EdgeInsets.only(top: 30)),
               Column(
                 children: [
                   Icon(

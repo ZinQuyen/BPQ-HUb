@@ -22,7 +22,7 @@ class _HistoryMatchState extends State<HistoryMatch> {
             Navigator.push(context, MaterialPageRoute(builder: (context) => MyWidget(title: 'BPQ Hub'),));
           }) ,
           
-          icon: Icon(Icons.history)),
+          icon: Icon(Icons.arrow_back)),
       ),
       drawer: const Menu(),
       body: const Text('trang lich sử đấu')

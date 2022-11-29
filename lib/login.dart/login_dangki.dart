@@ -83,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => LoginNamNu(
+                builder: (context) => MyHomePage(
                       title: 'Quay về',
                     )));
       },

@@ -1,4 +1,3 @@
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -37,31 +36,32 @@ class Body extends StatelessWidget {
               height: 20,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Text.rich(
-                TextSpan(
-                    text: "Question 1",
-                    style: TextStyle(color: Colors.white , fontSize: 50),
-                    children: [
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Obx((() => Text.rich(
                       TextSpan(
-                        text: "/10",
-                        style: TextStyle(color: Colors.white, fontSize: 25),
-                      )
-                    ]),
-              ),
-            ),
+                          text:
+                              "Question ${_questionController.questionNumber.value}",
+                          style: TextStyle(color: Colors.white, fontSize: 50),
+                          children: [
+                            TextSpan(
+                              text: "/${_questionController.questions.length}",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 25),
+                            )
+                          ]),
+                    )))),
             Divider(thickness: 1.5),
             SizedBox(
               height: 20,
             ),
             Expanded(
                 child: PageView.builder(
+                    physics: NeverScrollableScrollPhysics(),
+                    onPageChanged: _questionController.updateTheQnNum,
+                    controller: _questionController.pageController,
                     itemCount: _questionController.questions.length,
                     itemBuilder: ((context, index) => QuestionCard(
                           question: _questionController.questions[index],
-
-
-                          
                         ))))
           ]),
         )

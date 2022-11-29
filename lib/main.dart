@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'model/menu.dart';
 import 'screens/Shop.dart';
 import 'login.dart/login_welcome.dart';
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'BPQ Hub',
       theme: ThemeData.dark(),
       home: LoginPage(),

@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import '../login.dart/login_welcome.dart';
 import '../login.dart/login_namnu.dart';
+import 'login_namnu.dart';
 
 
 void main() {
   runApp(MaterialApp(
     title: 'Flutter Demo',
     theme: ThemeData(primarySwatch: Colors.red),
-    home: const LoginNamNu(title: '',),
+    home: const MyHomePage(title: 'Flutter Demo home page'),
   ));
 }
 
@@ -18,33 +19,30 @@ Widget build(BuildContext context) {
     theme: ThemeData(
       primarySwatch: Colors.blue,
     ),
-    home: const LoginNamNu(title: 'Flutter Demo Home Page'),
+    home: const MyHomePage(title: 'Flutter Demo Home Page'),
   );
 }
 
-class LoginNamNu extends StatefulWidget {
-  const LoginNamNu({super.key, required this.title});
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<LoginNamNu> createState() => _LoginNamNuState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
-enum Sex { male, female }
-
-class _LoginNamNuState extends State<LoginNamNu> {
-  Sex? _sex = Sex.male;
+class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     Widget Login = Text(
-      'Nhập thông tin',
+      'Tạo tài khoản',
       style: TextStyle(
-          fontWeight: FontWeight.bold, fontSize: 30, color: Colors.redAccent ),
+          fontWeight: FontWeight.bold, fontSize: 30, color: Colors.red),
     );
 
-    Widget Hoten(String title) => TextField(
-          style: TextStyle(color: Colors.grey),
+    Widget textField(String title) => TextField(
+          style: TextStyle(color: Colors.yellow),
           decoration: InputDecoration(
               enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(width: 1, color: Colors.grey),
@@ -54,8 +52,8 @@ class _LoginNamNuState extends State<LoginNamNu> {
               hintStyle: TextStyle(color: Colors.grey)),
         );
 
-    Widget Gmail(String title) => TextField(
-          style: TextStyle(color: Colors.grey),
+    Widget textFieldd(String title) => TextField(
+          style: TextStyle(color: Colors.yellow),
           decoration: InputDecoration(
               enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(width: 1, color: Colors.grey),
@@ -68,7 +66,7 @@ class _LoginNamNuState extends State<LoginNamNu> {
           style: TextStyle(color: Colors.yellow),
           decoration: InputDecoration(
               enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(width: 1, color: Colors.redAccent),
+                borderSide: BorderSide(width: 1, color: Colors.grey),
               ),
               border: OutlineInputBorder(),
               hintText: title,
@@ -81,86 +79,77 @@ class _LoginNamNuState extends State<LoginNamNu> {
               MaterialStatePropertyAll<Color>(Colors.yellow.withOpacity(0.8)),
           shape: MaterialStateProperty.all(RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30.0)))),
-      onPressed: () => {
-        Navigator.of(context).popUntil((route) => route.isFirst),
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => LoginPage())),
+      onPressed: () {
+        Navigator.of(context).popUntil((route) => route.isFirst);
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => MyHomePage(
+                      title: 'Quay về',
+                    )));
       },
       child: const Padding(
         padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-        child: Text('Xác nhận'),
+        child: Text('Tiếp tục'),
       ),
     );
 
     Widget Context = Container(
-      
-      width: MediaQuery.of(context).size.width / 1.1,
-      height: 700,
-      padding: EdgeInsets.all(10),
       margin: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-      child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
-        Login,
-        Padding(padding: EdgeInsets.all(20)),
-        Text(
-          'Thông tin này dùng để xác thực và bảo vệ tài khoản của bạn tốt hơn',
-          style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20, color: Colors.blueAccent),
-        ),
-        Padding(padding: EdgeInsets.all(20)),
-        Row(children: [
-          Expanded(
-            child: RadioListTile<Sex>(
-                title: const Text('Nam',style: TextStyle(fontWeight: FontWeight.bold, color: Colors.red),),
-                value: Sex.female,
-                groupValue: _sex,
-                onChanged: (Sex? value) {
-                  setState(() {
-                    _sex = value;
-                  });
-                }),
-          ),
-          Expanded(
-            child: RadioListTile<Sex>(
-                title: const Text('Nữ',style: TextStyle(fontWeight: FontWeight.bold, color: Colors.red),),
-                value: Sex.male,
-                groupValue: _sex,
-                onChanged: (Sex? value) {
-                  setState(() {
-                    _sex = value;
-                  });
-                }),
-          )
+      child: Column(children: [
+        Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Padding(padding: const EdgeInsets.only(top: 20), child: Login)
         ]),
-                Padding(padding: EdgeInsets.all(10)),
-
+        Container(
+          margin: EdgeInsets.only(top: 60),
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.only(right: 190),
+                child: Text(
+                  'Nhập tài khoản',
+                  style: TextStyle(
+                    fontSize: 20,
+                      fontWeight: FontWeight.bold, color: Colors.blueAccent),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Padding(padding: EdgeInsets.all(10)),
+        textField('Nhập tên đăng nhập'),
+        Padding(padding: EdgeInsets.all(10)),
         Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(right: 250),
+              padding: EdgeInsets.only(right: 40),
               child: Text(
-                'Nhập họ tên',
+                'Mật khẩu 6 số để bảo vệ an toàn',
                 style: TextStyle(
-                    fontWeight: FontWeight.bold,fontSize: 20, color: Colors.blueAccent),
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold, color: Colors.blueAccent),
               ),
             ),
           ],
         ),
         Padding(padding: EdgeInsets.all(10)),
-        Hoten('Họ tên'),
+        textFieldd('Nhập mật khẩu'),
         Padding(padding: EdgeInsets.all(10)),
         Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(right: 250),
+              padding: EdgeInsets.only(right: 165),
               child: Text(
-                'Nhập Gmail',
+                'Nhập lại mật khẩu',
                 style: TextStyle(
-                    fontWeight: FontWeight.bold,fontSize: 20, color: Colors.blueAccent ),
+                  fontSize: 20,
+                    fontWeight: FontWeight.bold, color: Colors.blueAccent),
               ),
             ),
           ],
         ),
         Padding(padding: EdgeInsets.all(10)),
-        Gmail('Gmail'),
+        textFielddd('Nhập lại mật khẩu'),
         Padding(padding: EdgeInsets.all(10)),
         btn
       ]),
@@ -168,15 +157,15 @@ class _LoginNamNuState extends State<LoginNamNu> {
     return Scaffold(
         backgroundColor: Colors.deepPurpleAccent[400],
         appBar: AppBar(
-          title: Text(widget.title),
           backgroundColor: Colors.yellow[600],
+          title: Text(widget.title),
         ),
-        body:Container(decoration: BoxDecoration(
+        body: Container(decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('image/b.png'),
                 fit: BoxFit.cover,)),
           child: 
         
-         Stack(children: [Container(), Context])));
+        Stack(children: [Container(), Context])));
   }
 }

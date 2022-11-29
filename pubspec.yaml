@@ -69,7 +69,10 @@ flutter:
     - image/dm.png
     - image/shield.png
     - image/time-span.png
-  
+    - image/ticket.png
+    - image/thedoiten.jpg
+    - image/hint.png
+    - image/jettt.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

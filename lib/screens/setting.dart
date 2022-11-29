@@ -1,5 +1,4 @@
-
-
+import 'package:phan04_baitap1/model/sound.dart';
 
 import '../model/menu.dart';
 import 'package:flutter/material.dart';
@@ -36,7 +35,6 @@ class _SettingScreenState extends State<SettingScreen> {
             ),
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
-        
           padding: EdgeInsets.all(20),
           margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: Column(
@@ -51,7 +49,10 @@ class _SettingScreenState extends State<SettingScreen> {
                     style: ButtonStyle(
                         backgroundColor:
                             MaterialStatePropertyAll<Color>(Colors.blueAccent)),
-                    onPressed: () {},
+                    onPressed: () {
+                       Navigator.push(context, 
+                       MaterialPageRoute(builder: (context) => SoundSetting()));
+                    },
                     child: const Padding(
                       padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
                       child: Text('Âm thanh',
@@ -71,7 +72,7 @@ class _SettingScreenState extends State<SettingScreen> {
                         backgroundColor:
                             MaterialStatePropertyAll<Color>(Colors.blueAccent)),
                     onPressed: () {},
-                    child: Text('Liên kết',style: TextStyle(
+                    child: Text('Đổi tên tài khoản',style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.bold)),
                   ),
                 ),
@@ -86,7 +87,7 @@ class _SettingScreenState extends State<SettingScreen> {
                         backgroundColor:
                             MaterialStatePropertyAll<Color>(Colors.blueAccent)),
                     onPressed: () {},
-                    child: Text('Hỗ trợ',style: TextStyle(
+                    child: Text('Đổi mật khẩu',style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.bold)),
                   ),
                 ),
