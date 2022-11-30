@@ -95,7 +95,7 @@ class _MyWidgetState extends State<MyWidget> {
               Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationScreen(),));
             }), icon: Icon(Icons.notifications_active))
           ],
-          title: Text('BPQ Hub'),
+          title: Text('Phi ngu'),
         ),
         drawer: const Menu(),
         body: Container(
