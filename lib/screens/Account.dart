@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../model/menu.dart';
 import 'Home.dart';
 
@@ -50,7 +49,7 @@ class _AccountScreenState extends State<AccountScreen> {
               style: TextStyle(
                   fontSize: 20.0,
                   fontFamily: 'Source Sans Pro',
-                  color: Colors.teal.shade100,
+                  color: Colors.blueAccent.shade200,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 2.5),
             ),

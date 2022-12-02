@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:phan04_baitap1/screens/card.dart';
 import 'package:phan04_baitap1/screens/history.dart';
-import '../login.dart/login_welcome.dart';
+import '../login/login_welcome.dart';
 import '../screens/Account.dart';
 import '../screens/Home.dart';
 import '../screens/setting.dart';
@@ -29,7 +29,7 @@ class _MenuState extends State<Menu> {
             child: Text('menu')
           ),
         ListTile(
-            leading: const Icon(Icons.account_circle),
+            leading: const Icon(Icons.home),
             title: const Text('Trang chủ'),
             onTap: () {
               Navigator.of(context).popUntil((route) => route.isFirst);

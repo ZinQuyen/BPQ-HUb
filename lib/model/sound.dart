@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:phan04_baitap1/login.dart/login_dangki.dart';
 import 'package:phan04_baitap1/screens/setting.dart';
 
 class SoundSetting extends StatefulWidget {

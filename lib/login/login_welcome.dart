@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import '../login.dart/login_dangki.dart';
+import '../login/login_dangki.dart';
 import '../main.dart';
 import '../screens/Home.dart';
 import '../screens/Shop.dart';
-import '../login.dart/login_quenpass.dart';
+import '../login/login_quenpass.dart';
 import 'login_dangki.dart';
 import 'login_quenpass.dart';
 
