@@ -26,23 +26,19 @@ class _RoomScreenState extends State<RoomScreen> {
         ),
       ),
       body: Container(
-        margin: EdgeInsets.all(5),
-        padding: EdgeInsets.only(top: 10),
-        width: double.infinity,
-        height: 650,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(25),
-          border: Border.all(
-            color: Color.fromARGB(255, 138, 160, 167),
-            width: 5,
-          ),
-        ),
+              image: DecorationImage(
+                image: AssetImage('image/b.png'),
+                fit: BoxFit.cover,
+              ),
+            ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
 
           // mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
+              
               padding: const EdgeInsets.only(left: 20),
               child: SizedBox(
                 width: 150,
@@ -66,7 +62,7 @@ class _RoomScreenState extends State<RoomScreen> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25),
                 border: Border.all(
-                  color: Color.fromARGB(255, 138, 160, 167),
+                  
                   width: 5,
                 ),
               ),
@@ -81,7 +77,7 @@ class _RoomScreenState extends State<RoomScreen> {
                             width: double.infinity,
                             height: 70,
                             child: Card(
-                              color: Colors.grey,
+                              color: Colors.white,
                               child: Center(
                                 child: TextButton(
                                   child: Text(
@@ -99,7 +95,7 @@ class _RoomScreenState extends State<RoomScreen> {
                             width: double.infinity,
                             height: 70,
                             child: Card(
-                              color: Colors.grey,
+                              color: Colors.white,
                               child: Center(
                                 child: TextButton(
                                   child: Text(
@@ -117,7 +113,7 @@ class _RoomScreenState extends State<RoomScreen> {
                             width: double.infinity,
                             height: 70,
                             child: Card(
-                              color: Colors.grey,
+                              color: Colors.white,
                               child: Center(
                                 child: TextButton(
                                   child: Text(
@@ -135,7 +131,7 @@ class _RoomScreenState extends State<RoomScreen> {
                             width: double.infinity,
                             height: 70,
                             child: Card(
-                              color: Colors.grey,
+                              color: Colors.white,
                               child: Center(
                                 child: TextButton(
                                   child: Text(
@@ -153,7 +149,7 @@ class _RoomScreenState extends State<RoomScreen> {
                             width: double.infinity,
                             height: 70,
                             child: Card(
-                              color: Colors.grey,
+                              color: Colors.white,
                               child: Center(
                                 child: TextButton(
                                   child: Text(
@@ -171,7 +167,7 @@ class _RoomScreenState extends State<RoomScreen> {
                             width: double.infinity,
                             height: 70,
                             child: Card(
-                              color: Colors.grey,
+                              color: Colors.white,
                               child: Center(
                                 child: TextButton(
                                   child: Text(
