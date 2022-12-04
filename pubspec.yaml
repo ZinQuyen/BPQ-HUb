@@ -73,6 +73,8 @@ flutter:
     - image/thedoiten.jpg
     - image/hint.png
     - image/jett.jpg
+    - image/visa.jpg
+    
   
 
   # An image asset can refer to one or more resolution-specific "variants", see

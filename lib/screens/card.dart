@@ -31,7 +31,7 @@ class _CardScreenState extends State<CardScreen> {
         child: Container(
           padding: EdgeInsets.only(top: 10),
           width: double.infinity,
-          height: 500,
+          height: 450,
           decoration: BoxDecoration(
               border: Border.all(
                 color: Color.fromARGB(255, 101, 217, 246),
@@ -39,38 +39,24 @@ class _CardScreenState extends State<CardScreen> {
               ),
               borderRadius: BorderRadius.circular(35)),
           child: Column(
-            // mainAxisAlignment: MainAxisAlignment.center,
-            // crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                padding: EdgeInsets.all(8),
-                width: 300,
-                height: 250,
-                decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Color.fromARGB(255, 101, 217, 246),
-                      width: 3,
+              // mainAxisAlignment: MainAxisAlignment.center,
+              // crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Image.asset('image/visa.jpg',
+                height: 300,),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: TextField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'XXX-XXX-XXX',
                     ),
-                    borderRadius: BorderRadius.circular(20)),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [Row()],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: TextField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'XXX-XXX-XXX',
                   ),
                 ),
-              ),
-              ElevatedButton(onPressed: (() {}), child: const Text('Xác nhận'))
-            ],
-          ),
+                ElevatedButton(
+                    onPressed: (() {}), child: const Text('Nap'))
+              ]),
         ),
       ),
     );
